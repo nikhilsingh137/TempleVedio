@@ -1,0 +1,130 @@
+.DrashanVedio {
+  display: block;
+  position: relative;
+  height: 100%;
+  .vedio {
+    display: block;
+    height: 100%;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .Content {
+    bottom: 20px;
+    flex-direction: column;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 99;
+    .imageButton {
+      width: 560px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .text {
+        cursor: pointer;
+        display: block;
+        text-align: center;
+        position: relative;
+
+        span {
+          display: block;
+          margin: 0 auto;
+          position: relative;
+          width: 90px;
+          height: 90px;
+          margin-bottom: 10px;
+          .chakra-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            .image {
+              position: absolute;
+              width: 90px;
+              height: 90px;
+              top: 0;
+              left: 0;
+            }
+            .chakra {
+              position: absolute;
+              width: 110px;
+              height: 110px;
+              top: -16px;
+              left: -10px;
+              animation: rotateChakra 3s infinite linear;
+            }
+          }
+        }
+
+        strong {
+          display: block;
+          color: #fff;
+          margin-top: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .overlay {
+    background: linear-gradient(1turn, rgba(0, 0, 0, 0.7), transparent);
+    bottom: 0;
+    height: 230px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
+
+  @keyframes rotateChakra {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 360px) {
+  .DrashanVedio {
+    display: block;
+    .Content {
+      .imageButton {
+        width: auto;
+        .text {
+          display: block;
+          margin-left: 10px;
+          margin-right: 10px;
+          span {
+            display: block;
+            height: 60px;
+            width: auto;
+            .chakra-wrapper {
+              .chakra {
+                height: 80px;
+                width: 80px;
+                top: -10px;
+                left: -5px;
+              }
+              .image {
+                width: 70px;
+                height: 70px;
+              }
+            }
+          }
+          strong {
+            font-size: 12px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}
