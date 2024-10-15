@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/TempleVedio/static/css/main.5ab4f567.css",
+    "main.js": "/TempleVedio/static/js/main.a8d7dcf5.js",
+    "static/media/ram-mandir-pusp-button.png": "/TempleVedio/static/media/ram-mandir-pusp-button.3237ad339a0170ad943f.png",
+    "static/media/ram-mandir-prasad-button.png": "/TempleVedio/static/media/ram-mandir-prasad-button.aa5a27d0f0d8fb352d7f.png",
+    "static/media/ram-mandir-aarti-button.png": "/TempleVedio/static/media/ram-mandir-aarti-button.000bf80dca8def4c7d38.png",
+    "static/media/ram-mandir-jyoti-button.png": "/TempleVedio/static/media/ram-mandir-jyoti-button.8d2144aea144a8894fb1.png",
+    "static/media/ram-mandir-button-chakra-button.png": "/TempleVedio/static/media/ram-mandir-button-chakra-button.8f94524af377e988b0ff.png",
+    "static/media/ram-mandir-background.jpg": "/TempleVedio/static/media/ram-mandir-background.ecc98d713a77d809772d.jpg",
+    "static/media/pura-mandir-button.png": "/TempleVedio/static/media/pura-mandir-button.cc8004960aa6b1a3f125.png",
+    "static/media/darshan-button-image.png": "/TempleVedio/static/media/darshan-button-image.016a7b778768131a4d58.png",
+    "static/media/ram-mandir-aage-bade-button.png": "/TempleVedio/static/media/ram-mandir-aage-bade-button.1f4bc7cc03db50b77a1a.png",
+    "static/media/ganti-touch icon.png": "/TempleVedio/static/media/ganti-touch icon.e83f208e3f9422ceee31.png",
+    "static/media/nikhil-logo3-removebg-preview.png": "/TempleVedio/static/media/nikhil-logo3-removebg-preview.2e27860cb9d09fc7815c.png",
+    "index.html": "/TempleVedio/index.html",
+    "main.5ab4f567.css.map": "/TempleVedio/static/css/main.5ab4f567.css.map",
+    "main.a8d7dcf5.js.map": "/TempleVedio/static/js/main.a8d7dcf5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5ab4f567.css",
+    "static/js/main.a8d7dcf5.js"
+  ]
+}
