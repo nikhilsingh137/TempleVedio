@@ -41,12 +41,13 @@
     display: block;
     .buttonBox {
       display: block;
+      bottom: 5%;
       .button {
         display: block;
         width: 100%;
         span {
           width: 100%;
-          height: 80px;
+          height: 68px;
         }
       }
     }
