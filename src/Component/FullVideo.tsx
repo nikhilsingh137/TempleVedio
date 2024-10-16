@@ -41,6 +41,8 @@ const FullVideo: React.FC<IType> = ({
       const currentWidth = window.innerWidth;
       setIsMobile(currentWidth <= 768);
     };
+
+    // Check on initial render
     checkIfMobile();
     window.addEventListener("resize", checkIfMobile);
 
@@ -165,6 +167,7 @@ const FullVideo: React.FC<IType> = ({
             ref={firstVideoRef}
             onCanPlay={handlePlayVideo}
             onEnded={handleVideoEnd}
+            controls
           >
             <source
               src={
@@ -187,13 +190,7 @@ const FullVideo: React.FC<IType> = ({
           </div>
           <img src={Start} alt="" onClick={handleThirdVideo} />
           <audio ref={audioRef}>
-            <source
-              src={
-                !isMobile
-                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/ghanta2.mp3"
-                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
-              }
-            />
+            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/ghanta2.mp3" />
           </audio>
         </div>
       )}
@@ -204,13 +201,7 @@ const FullVideo: React.FC<IType> = ({
           onEnded={handleVideoEnd1}
         >
           <video ref={thirdVideoRef}>
-            <source
-              src={
-                !isMobile
-                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4"
-                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v2.mp4"
-              }
-            />
+            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4" />
           </video>
         </div>
       )}
@@ -240,13 +231,7 @@ const FullVideo: React.FC<IType> = ({
                 handleLoadedMetadata();
               }}
             >
-              <source
-                src={
-                  !isMobile
-                    ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4"
-                    : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
-                }
-              />
+              <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4" />
             </video>
           </div>
           {showImage && (
@@ -283,7 +268,7 @@ const FullVideo: React.FC<IType> = ({
                       <img src={JyotiImg} alt="" className={Style.image} />
                     </div>
                   </span>
-                  <strong>ज्योति जलाएं</strong>
+                  <strong>श्रीराम ज्योति जलाएं</strong>
                 </div>
                 <div className={Style.text}>
                   <span onClick={handleAarti}>
