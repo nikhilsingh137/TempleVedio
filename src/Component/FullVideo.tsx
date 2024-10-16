@@ -200,8 +200,14 @@ const FullVideo: React.FC<IType> = ({
           onCanPlay={handlePlayVideo2}
           onEnded={handleVideoEnd1}
         >
-          <video ref={thirdVideoRef}>
-            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4" />
+          <video ref={thirdVideoRef} controls>
+            <source
+              src={
+                isMobile
+                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4"
+                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v2.mp4"
+              }
+            />
           </video>
         </div>
       )}
