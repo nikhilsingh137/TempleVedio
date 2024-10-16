@@ -10,14 +10,18 @@ const ImageBox = () => {
   const [showImage, setShowImage] = useState(true);
   const [firstVideoPlaying, setFirstVideoPlaying] = useState(false);
   const [vedio, setVedio] = useState(false);
+  const [showFullVideo, setShowFullVideo] = useState(false);
+  const [showDarshanVideo, setShowDarshanVideo] = useState(false);
 
   const handleFullVideo = () => {
     setShowImage(false);
     setFirstVideoPlaying(true);
+    setShowFullVideo(true);
   };
   const handleDarshanVedio = () => {
     setShowImage(false);
     setVedio(true);
+    setShowDarshanVideo(true);
   };
 
   return (
@@ -39,11 +43,13 @@ const ImageBox = () => {
           </div>
         </div>
       )}
-      <FullVideo
-        firstVideoPlaying={firstVideoPlaying}
-        setFirstVideoPlaying={setFirstVideoPlaying}
-      />
-      <DrashanVedio vedio={vedio} setVedio={setVedio} />
+      {showFullVideo && (
+        <FullVideo
+          firstVideoPlaying={firstVideoPlaying}
+          setFirstVideoPlaying={setFirstVideoPlaying}
+        />
+      )}
+      {showDarshanVideo && <DrashanVedio vedio={vedio} setVedio={setVedio} />}
     </>
   );
 };
