@@ -23,6 +23,17 @@ const DrashanVedio: React.FC<IType> = ({ vedio, setVedio }) => {
   const [overlay, setOverlay] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+    const MobileVideo = () => {
+      const mobilevedio = window.innerWidth <= 768;
+      setIsMobile(mobilevedio);
+    };
+    window.addEventListener("resize", MobileVideo);
+    return () => {
+      window.removeEventListener("resize", MobileVideo);
+    };
+  }, []);
+
   const handlePlayVedio = () => {
     if (vedioRef.current) {
       const totalDuration = vedioRef.current.duration;
@@ -95,7 +106,7 @@ const DrashanVedio: React.FC<IType> = ({ vedio, setVedio }) => {
             >
               <source
                 src={
-                  isMobile
+                  !isMobile
                     ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4"
                     : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
                 }
@@ -137,7 +148,7 @@ const DrashanVedio: React.FC<IType> = ({ vedio, setVedio }) => {
                     <img src={JyotiImg} alt="" className={Style.image} />
                   </div>
                 </span>
-                <strong>श्रीराम ज्योति जलाएं</strong>
+                <strong>ज्योति जलाएं</strong>
               </div>
               <div className={Style.text}>
                 <span onClick={handleAarti}>

@@ -187,7 +187,13 @@ const FullVideo: React.FC<IType> = ({
           </div>
           <img src={Start} alt="" onClick={handleThirdVideo} />
           <audio ref={audioRef}>
-            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/ghanta2.mp3" />
+            <source
+              src={
+                !isMobile
+                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/ghanta2.mp3"
+                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
+              }
+            />
           </audio>
         </div>
       )}
@@ -200,7 +206,7 @@ const FullVideo: React.FC<IType> = ({
           <video ref={thirdVideoRef}>
             <source
               src={
-                isMobile
+                !isMobile
                   ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4"
                   : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v2.mp4"
               }
@@ -236,7 +242,7 @@ const FullVideo: React.FC<IType> = ({
             >
               <source
                 src={
-                  isMobile
+                  !isMobile
                     ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4"
                     : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
                 }
@@ -277,7 +283,7 @@ const FullVideo: React.FC<IType> = ({
                       <img src={JyotiImg} alt="" className={Style.image} />
                     </div>
                   </span>
-                  <strong>श्रीराम ज्योति जलाएं</strong>
+                  <strong>ज्योति जलाएं</strong>
                 </div>
                 <div className={Style.text}>
                   <span onClick={handleAarti}>
