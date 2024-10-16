@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/TempleVedio/static/css/main.331dabee.css",
+    "main.css": "/TempleVedio/static/css/main.2217e77b.css",
     "main.js": "/TempleVedio/static/js/main.c0d814e8.js",
     "static/media/ram-mandir-pusp-button.png": "/TempleVedio/static/media/ram-mandir-pusp-button.3237ad339a0170ad943f.png",
     "static/media/ram-mandir-prasad-button.png": "/TempleVedio/static/media/ram-mandir-prasad-button.aa5a27d0f0d8fb352d7f.png",
@@ -14,11 +14,11 @@
     "static/media/ganti-touch icon.png": "/TempleVedio/static/media/ganti-touch icon.e83f208e3f9422ceee31.png",
     "static/media/nikhil-logo3-removebg-preview.png": "/TempleVedio/static/media/nikhil-logo3-removebg-preview.2e27860cb9d09fc7815c.png",
     "index.html": "/TempleVedio/index.html",
-    "main.331dabee.css.map": "/TempleVedio/static/css/main.331dabee.css.map",
+    "main.2217e77b.css.map": "/TempleVedio/static/css/main.2217e77b.css.map",
     "main.c0d814e8.js.map": "/TempleVedio/static/js/main.c0d814e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.331dabee.css",
+    "static/css/main.2217e77b.css",
     "static/js/main.c0d814e8.js"
   ]
 }
