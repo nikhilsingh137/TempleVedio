@@ -167,7 +167,6 @@ const FullVideo: React.FC<IType> = ({
             ref={firstVideoRef}
             onCanPlay={handlePlayVideo}
             onEnded={handleVideoEnd}
-            controls
           >
             <source
               src={
@@ -200,7 +199,7 @@ const FullVideo: React.FC<IType> = ({
           onCanPlay={handlePlayVideo2}
           onEnded={handleVideoEnd1}
         >
-          <video ref={thirdVideoRef} controls>
+          <video ref={thirdVideoRef}>
             <source
               src={
                 isMobile
