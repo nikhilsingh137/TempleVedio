@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "./imagebox.module.scss";
 import ImageImg from "../img/ram-mandir-background.jpg";
 import FullTemp from "../img/pura-mandir-button.png";
 import DarshanTemp from "../img/darshan-button-image.png";
 import FullVideo from "./FullVideo";
 import DrashanVedio from "./DrashanVedio";
+import MobileImage from "../img/ram-mandir-mobile-background.jpg";
 
 const ImageBox = () => {
   const [showImage, setShowImage] = useState(true);
@@ -12,6 +13,20 @@ const ImageBox = () => {
   const [vedio, setVedio] = useState(false);
   const [showFullVideo, setShowFullVideo] = useState(false);
   const [showDarshanVideo, setShowDarshanVideo] = useState(false);
+  const [mobileImage, setMobileImage] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const currentWidth = window.innerWidth;
+      setMobileImage(currentWidth <= 768);
+    };
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
 
   const handleFullVideo = () => {
     setShowImage(false);
@@ -29,7 +44,11 @@ const ImageBox = () => {
       {showImage && (
         <div className={Style.ImageBox}>
           <div className={Style.image}>
-            <img src={ImageImg} alt="" />
+            {!mobileImage ? (
+              <img src={ImageImg} alt="" />
+            ) : (
+              <img src={MobileImage} alt="" />
+            )}
           </div>
           <div className={Style.buttonBox}>
             <div className={Style.button}>

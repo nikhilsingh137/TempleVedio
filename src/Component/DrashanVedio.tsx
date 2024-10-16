@@ -21,6 +21,7 @@ const DrashanVedio: React.FC<IType> = ({ vedio, setVedio }) => {
   const [jyotiData, setJyotiData] = useState(false);
   const [aartiData, setAartiData] = useState(false);
   const [overlay, setOverlay] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const handlePlayVedio = () => {
     if (vedioRef.current) {
@@ -92,7 +93,13 @@ const DrashanVedio: React.FC<IType> = ({ vedio, setVedio }) => {
                 handleLoadedMetadata();
               }}
             >
-              <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4" />
+              <source
+                src={
+                  isMobile
+                    ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4"
+                    : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
+                }
+              />
             </video>
           </div>
         )}

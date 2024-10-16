@@ -23,6 +23,7 @@ const FullVideo: React.FC<IType> = ({
   const [fifthVideoPlaying, setFifthVideoPlaying] = useState(false);
   const [showImage, setShowImage] = useState(false);
   const [animatedImage, setAnimatedImage] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [puspData, setPuspData] = useState(false);
   const [prasadData, setPrasadData] = useState(false);
   const [jyotiData, setJyotiData] = useState(false);
@@ -34,6 +35,19 @@ const FullVideo: React.FC<IType> = ({
   const fifthVideoRef: any = useRef(null);
   const audioRef: any = useRef(null);
   const audioRef1: any = useRef(null);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      const currentWidth = window.innerWidth;
+      setIsMobile(currentWidth <= 768);
+    };
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
 
   const handlePlayVideo = () => {
     if (firstVideoRef.current) {
@@ -152,7 +166,13 @@ const FullVideo: React.FC<IType> = ({
             onCanPlay={handlePlayVideo}
             onEnded={handleVideoEnd}
           >
-            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v1.mp4" />
+            <source
+              src={
+                isMobile
+                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v1.mp4"
+                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v1.mp4"
+              }
+            />
           </video>
         </div>
       )}
@@ -178,7 +198,13 @@ const FullVideo: React.FC<IType> = ({
           onEnded={handleVideoEnd1}
         >
           <video ref={thirdVideoRef}>
-            <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4" />
+            <source
+              src={
+                isMobile
+                  ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v2.mp4"
+                  : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v2.mp4"
+              }
+            />
           </video>
         </div>
       )}
@@ -208,7 +234,13 @@ const FullVideo: React.FC<IType> = ({
                 handleLoadedMetadata();
               }}
             >
-              <source src="https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4" />
+              <source
+                src={
+                  isMobile
+                    ? "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-desktop-p3-v3.mp4"
+                    : "https://www.bhaskar.com/__static__/2.0/ram-mandir/videos/v8/hi-mobile-p3-v3.mp4"
+                }
+              />
             </video>
           </div>
           {showImage && (
