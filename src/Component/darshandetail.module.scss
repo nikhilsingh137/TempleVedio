@@ -8,11 +8,18 @@
     left: 0;
     height: 100%;
     padding: 0px 10px;
-    overflow: hidden;
+
     video {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      overflow: hidden;
     }
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 360px) {
+  .DarshanDetail {
+    display: block;
   }
 }
