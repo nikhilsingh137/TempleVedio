@@ -11,6 +11,7 @@ const FullVideoPage = () => {
         top: "0px",
         minHeight: "100vh",
         width: "100%",
+        zIndex: "999",
       }}
     >
       <Header />
