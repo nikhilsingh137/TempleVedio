@@ -21,6 +21,7 @@
     justify-content: center;
     width: 100%;
     z-index: 99;
+    padding: 0px 10px;
     .imageButton {
       width: 560px;
       margin: 0 auto;
@@ -99,10 +100,9 @@
       bottom: 10%;
       .imageButton {
         width: auto;
+        gap: 20px;
         .text {
           display: block;
-          margin-left: 10px;
-          margin-right: 10px;
           span {
             display: block;
             height: 60px;
